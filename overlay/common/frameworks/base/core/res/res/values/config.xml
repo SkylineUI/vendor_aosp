@@ -77,4 +77,6 @@
     <!-- Make the gesture options show up -->
     <bool name="config_swipe_up_gesture_setting_available">true</bool>
 
+    <!-- Whether safe headphone volume is enabled or not. -->
+    <bool name="config_safe_media_volume_enabled">false</bool>
 </resources>
