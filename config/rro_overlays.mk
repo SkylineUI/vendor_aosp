@@ -29,3 +29,5 @@ PRODUCT_PACKAGES += \
     SystemUIGoogleOverlay \
     StorageManagerGoogleOverlay \
     FlipendoOverlay
+    GesturalNavigationOverlayLong \
+    GesturalNavigationOverlayMedium
