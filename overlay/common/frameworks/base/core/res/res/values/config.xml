@@ -77,4 +77,12 @@
 
     <!-- Whether or not we should show the option to show battery percentage -->
     <bool name="config_battery_percentage_setting_available">false</bool>
+
+    <!-- Control the default night mode to use when there is no other mode override set.
+     One of the following values (see UiModeManager.java):
+         0 - MODE_NIGHT_AUTO
+         1 - MODE_NIGHT_NO
+         2 - MODE_NIGHT_YES
+    -->
+    <integer name="config_defaultNightMode">0</integer>
 </resources>
