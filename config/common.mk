@@ -227,6 +227,10 @@ PRODUCT_PACKAGES += \
     NexusLauncherResOverlay \
     BlackThemeOverlay
 
+# GameSpace
+PRODUCT_PACKAGES += \
+    GameSpace
+
 # Audio
 $(call inherit-product, vendor/aosp/config/audio.mk)
 
