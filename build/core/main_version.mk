@@ -26,8 +26,11 @@ endif
 
 # Versioning props
 ADDITIONAL_SYSTEM_PROPERTIES  += \
-    org.pixelexperience.version=$(CUSTOM_VERSION_PROP) \
-    org.pixelexperience.version.display=$(CUSTOM_VERSION) \
-    org.pixelexperience.build_date=$(CUSTOM_BUILD_DATE) \
-    org.pixelexperience.build_date_utc=$(CUSTOM_BUILD_DATE_UTC) \
-    org.pixelexperience.build_type=$(CUSTOM_BUILD_TYPE)
+    org.skylineui.version=$(SKYLINEUI_BASE_VERSION) \
+    org.skylineui.version.display=$(CUSTOM_VERSION) \
+    org.skylineui.build_date=$(CUSTOM_BUILD_DATE) \
+    org.skylineui.build_date_utc=$(CUSTOM_BUILD_DATE_UTC) \
+    org.skylineui.build_type=$(CUSTOM_BUILD_TYPE) \
+    org.skylineui.codename=$(SKYLINEUI_BASE_VERSION) \
+    org.skylineui.build_version=$(SKYLINEUI_BUILD_VERSION) \
+    ro.skylineui.maintainer=$(SKYLINEUI_MAINTAINER)
