@@ -43,10 +43,10 @@ except ImportError:
 DEBUG = False
 
 custom_local_manifest = ".repo/local_manifests/pixel.xml"
-custom_default_revision =  os.getenv('ROOMSERVICE_DEFAULT_BRANCH', 'fourteen')
+custom_default_revision =  os.getenv('ROOMSERVICE_DEFAULT_BRANCH', 'aosp-14')
 custom_dependencies = "aosp.dependencies"
-org_manifest = "pixel-devices"  # leave empty if org is provided in manifest
-org_display = "PixelExperience-Devices"  # needed for displaying
+org_manifest = "skylineui-devices"  # leave empty if org is provided in manifest
+org_display = "SkylineUI-Devices"  # needed for displaying
 
 github_auth = None
 

@@ -1,7 +1,7 @@
 # Branding
 $(call inherit-product, vendor/aosp/config/branding.mk)
 
-PRODUCT_BRAND ?= PixelExperience
+PRODUCT_BRAND ?= SkylineUI
 
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 
@@ -50,7 +50,7 @@ PRODUCT_COPY_FILES += \
 
 # Copy all custom init rc files
 PRODUCT_COPY_FILES += \
-    vendor/aosp/prebuilt/common/etc/init/init.pixelexperience-updater.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/init.pixelexperience-updater.rc
+    vendor/aosp/prebuilt/common/etc/init/init.skyline-updater.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/init.skyline-updater.rc \
 
 # Enable SIP+VoIP on all targets
 PRODUCT_COPY_FILES += \
