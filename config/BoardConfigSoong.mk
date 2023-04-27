@@ -108,3 +108,5 @@ endif
 ifneq ($(TARGET_USES_NQ_NFC),true)
 PRODUCT_SOONG_NAMESPACES += hardware/nxp
 endif #TARGET_USES_NQ_NFC
+
+SYSTEMUI_USE_COMPOSE = true
