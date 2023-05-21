@@ -263,8 +263,4 @@ $(call inherit-product, vendor/pixel-framework/config.mk)
 # Themed icons
 $(call inherit-product, packages/overlays/ThemeIcons/config.mk)
 
-# PixelLauncherExtended
-$(call inherit-product, vendor/PixelLauncherExtended/PixelLauncher.mk)
-PIXEL_LAUNCHER_VARIANT := glance12
-
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
