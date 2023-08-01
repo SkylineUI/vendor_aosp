@@ -69,8 +69,16 @@ TARGET_KERNEL_HEADERS ?= $(TARGET_KERNEL_SOURCE)
 KERNEL_VERSION := $(shell grep -s "^VERSION = " $(TARGET_KERNEL_SOURCE)/Makefile | awk '{ print $$3 }')
 KERNEL_PATCHLEVEL := $(shell grep -s "^PATCHLEVEL = " $(TARGET_KERNEL_SOURCE)/Makefile | awk '{ print $$3 }')
 TARGET_KERNEL_VERSION ?= $(shell echo $(KERNEL_VERSION)"."$(KERNEL_PATCHLEVEL))
-
 CLANG_PREBUILTS := $(BUILD_TOP)/prebuilts/clang/host/$(HOST_PREBUILT_TAG)/clang-r450784d
+
+# 5.10+ can fully compile without GCC by default
+ifneq ($(KERNEL_VERSION),)
+    ifeq ($(shell expr $(KERNEL_VERSION) \>= 5), 1)
+        ifeq ($(shell expr $(KERNEL_PATCHLEVEL) \>= 10), 1)
+            TARGET_KERNEL_NO_GCC ?= true
+        endif
+    endif
+endif
 
 ifneq ($(USE_CCACHE),)
     ifneq ($(CCACHE_EXEC),)
