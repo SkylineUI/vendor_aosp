@@ -4,6 +4,19 @@ CUSTOM_BUILD_TYPE ?= UNOFFICIAL
 # SkylineUI Props
 SKYLINEUI_BASE_VERSION = STABLE
 
+# SkylineUI Release
+ifeq ($(CUSTOM_BUILD_TYPE), OFFICIAL)
+
+  OFFICIAL_DEVICES = $(shell cat vendor/aosp/skylineui.devices)
+  FOUND_DEVICE =  $(filter $(CUSTOM_BUILD), $(OFFICIAL_DEVICES))
+    ifeq ($(FOUND_DEVICE),$(CUSTOM_BUILD))
+      CUSTOM_BUILD_TYPE := OFFICIAL
+    else
+      CUSTOM_BUILD_TYPE := UNOFFICIAL
+      $(error Device is not official "$(CUSTOM_BUILD)")
+    endif
+endif
+
 # Time Related
 CUSTOM_DATE_YEAR := $(shell date -u +%Y)
 CUSTOM_DATE_MONTH := $(shell date -u +%m)

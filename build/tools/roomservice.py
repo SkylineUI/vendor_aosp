@@ -47,7 +47,7 @@ custom_default_revision = os.getenv('ROOMSERVICE_DEFAULT_BRANCH', 'aosp-13')
 custom_fallback_revision = 'thirteen'
 uses_fallback_revision = False
 custom_dependencies = "aosp.dependencies"
-org_manifest = "SkylineUI-devices"  # leave empty if org is provided in manifest
+org_manifest = "skylineui-devices"  # leave empty if org is provided in manifest
 org_display = "SkylineUI-Devices"  # needed for displaying
 
 github_auth = None
