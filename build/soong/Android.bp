@@ -1,4 +1,4 @@
-// SkylineUI soong configs
+// PixelOS soong configs
 
 bootstrap_go_package {
     name: "soong-custom-generator",
@@ -42,22 +42,12 @@ custom_generator {
     ],
 }
 
-cc_defaults {
-    name: "generated_kernel_header_defaults",
+cc_library_headers {
+    name: "generated_kernel_headers",
     generated_headers: ["generated_kernel_includes"],
     export_generated_headers: ["generated_kernel_includes"],
     vendor_available: true,
     recovery_available: true,
-}
-
-cc_library_headers {
-    name: "generated_kernel_headers",
-    defaults: ["generated_kernel_header_defaults"],
-}
-
-cc_library_headers {
-    name: "qti_kernel_headers",
-    defaults: ["generated_kernel_header_defaults"],
 }
 
 // Target platform agnostic config modules
@@ -251,6 +241,23 @@ needs_camera_boottime {
     soong_config_variables: {
         needs_camera_boottime: {
             cppflags: ["-DTARGET_CAMERA_BOOTTIME_TIMESTAMP"],
+        },
+    },
+}
+
+soong_config_module_type {
+    name: "uses_miui_camera",
+    module_type: "cc_defaults",
+    config_namespace: "customGlobalVars",
+    bool_variables: ["uses_miui_camera"],
+    properties: ["cppflags"],
+}
+
+uses_miui_camera {
+    name: "uses_miui_camera_defaults",
+    soong_config_variables: {
+        uses_miui_camera: {
+            cppflags: ["-DUSES_MIUI_CAMERA"],
         },
     },
 }
