@@ -125,8 +125,8 @@ PRODUCT_PACKAGES += \
     DummyCutoutOverlay
 
 # GameSpace
-PRODUCT_PACKAGES += \
-    GameSpace
+#PRODUCT_PACKAGES += \
+#    GameSpace
 
 # TouchGestures
 PRODUCT_PACKAGES += \
@@ -215,15 +215,15 @@ TARGET_SUPPORTS_QUICK_TAP ?= false
 TARGET_SUPPORTS_CALL_RECORDING ?= true
 
 # Face Unlock
-TARGET_FACE_UNLOCK_SUPPORTED ?= true
-ifeq ($(TARGET_FACE_UNLOCK_SUPPORTED),true)
-PRODUCT_PACKAGES += \
-    FaceUnlockService
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    ro.face_unlock_service.enabled=$(TARGET_FACE_UNLOCK_SUPPORTED)
-PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.hardware.biometrics.face.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.hardware.biometrics.face.xml
-endif
+#TARGET_FACE_UNLOCK_SUPPORTED ?= true
+#ifeq ($(TARGET_FACE_UNLOCK_SUPPORTED),true)
+#PRODUCT_PACKAGES += \
+#    FaceUnlockService
+#PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+#    ro.face_unlock_service.enabled=$(TARGET_FACE_UNLOCK_SUPPORTED)
+#PRODUCT_COPY_FILES += \
+#    frameworks/native/data/etc/android.hardware.biometrics.face.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.hardware.biometrics.face.xml
+#endif
 
 # Repainter integration
 PRODUCT_PACKAGES += \
@@ -246,15 +246,15 @@ $(call inherit-product, vendor/aosp/config/fonts.mk)
 $(call inherit-product, vendor/gms/products/gms.mk)
 
 # OTA
-$(call inherit-product, vendor/aosp/config/ota.mk)
+#$(call inherit-product, vendor/aosp/config/ota.mk)
 
 # RRO Overlays
 $(call inherit-product, vendor/aosp/config/rro_overlays.mk)
 
 # Pixel Framework
-$(call inherit-product, vendor/pixel-framework/config.mk)
+#$(call inherit-product, vendor/pixel-framework/config.mk)
 
 # Themed icons
-$(call inherit-product, packages/overlays/ThemeIcons/config.mk)
+#$(call inherit-product, packages/overlays/ThemeIcons/config.mk)
 
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
