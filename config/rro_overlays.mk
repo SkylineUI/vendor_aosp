@@ -8,6 +8,7 @@ PRODUCT_PACKAGES += \
     PixelConfigOverlayCommon \
     TeleServiceOverlay \
     CaptivePortalLoginOverlay \
+    PixelLauncherIconsOverlay \
     GoogleWebViewOverlay \
     TelecomOverlay \
     CellBroadcastServiceOverlay \
