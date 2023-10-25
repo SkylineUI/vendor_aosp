@@ -23,4 +23,7 @@
          does not work well, particularly with noisy touchscreens. Note that disabling it may
          increase the rate of unintentional unlocks. -->
     <bool name="config_lockscreenAntiFalsingClassifierEnabled">false</bool>
+
+    <!-- Whether or not lockscreen shortcuts can be customized -->
+    <bool name="custom_lockscreen_shortcuts_enabled" translatable="false">true</bool>
 </resources>
