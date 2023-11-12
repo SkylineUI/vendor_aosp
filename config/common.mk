@@ -120,6 +120,10 @@ PRODUCT_PRODUCT_PROPERTIES += \
 PRODUCT_PACKAGES += \
     AndroidBlackThemeOverlay
 
+# SkylineUI packages
+PRODUCT_PACKAGES += \
+    GameSpace
+
 # Dex preopt
 PRODUCT_DEXPREOPT_SPEED_APPS += \
     SystemUIGoogle \
