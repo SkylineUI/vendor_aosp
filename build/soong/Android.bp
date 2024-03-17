@@ -1,4 +1,4 @@
-// PixelOS soong configs
+// SkylineUI soong configs
 
 bootstrap_go_package {
     name: "soong-custom-generator",

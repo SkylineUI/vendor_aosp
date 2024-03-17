@@ -7,7 +7,7 @@ Additional functions:
 - mmmp:            Builds all of the modules in the supplied directories and pushes them to the device.
 - aospremote:      Add git remote for matching AOSP repository.
 - cloremote:       Add git remote for matching CodeLinaro repository.
-- githubremote:    Add git remote for PixelOS-AOSP Github.
+- githubremote:    Add git remote for SkylineUI-AOSP Github.
 - mka:             Builds using SCHED_BATCH on all processors.
 - mkap:            Builds the module(s) using mka and pushes them to the device.
 - cmka:            Cleans and builds using mka.
@@ -91,7 +91,7 @@ alias bib=breakfast
 function eat()
 {
     if [ "$OUT" ] ; then
-        ZIPPATH=`ls -tr "$OUT"/PixelOS-*.zip | tail -1`
+        ZIPPATH=`ls -tr "$OUT"/SkylineUI-*.zip | tail -1`
         if [ ! -f $ZIPPATH ] ; then
             echo "Nothing to eat"
             return 1
@@ -306,7 +306,7 @@ function githubremote()
 
     local PROJECT=$(echo $REMOTE | sed -e "s#platform/#android/#g; s#/#_#g")
 
-    git remote add github https://github.com/PixelOS-AOSP/$PROJECT
+    git remote add github https://github.com/SkylineUI/$PROJECT
     echo "Remote 'github' created"
 }
 

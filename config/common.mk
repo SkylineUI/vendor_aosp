@@ -4,7 +4,7 @@ $(call inherit-product-if-exists, vendor/extra/product.mk)
 # Google Apps
 $(call inherit-product, vendor/gms/products/gms.mk)
 
-PRODUCT_BRAND ?= PixelOS
+PRODUCT_BRAND ?= SkylineUI
 
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 
