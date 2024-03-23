@@ -3,7 +3,8 @@ $(call inherit-product, vendor/aosp/config/common_mobile.mk)
 
 PRODUCT_SIZE := full
 
-ifneq ($(PRODUCT_NO_CAMERA),true)
+TARGET_BUILD_APERTURE ?= true
+ifneq ($(TARGET_BUILD_APERTURE),true)
 PRODUCT_PACKAGES += \
     Aperture
 endif
